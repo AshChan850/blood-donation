@@ -40,7 +40,7 @@ class App extends Component {
     const networkId = await web3.eth.net.getId()
     // const networkData = Blood.networks[networkId]
     if(true) {
-      const blood = web3.eth.Contract(Blood.abi, '0xe7803037161081637DA174F8c87b8442927FD1Fb')
+      const blood = web3.eth.Contract(Blood, '0xe7803037161081637DA174F8c87b8442927FD1Fb')
       this.setState({ blood })
       const bagCount = await blood.methods.bagCount().call()
       this.setState({ bagCount })
